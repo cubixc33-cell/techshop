@@ -1,0 +1,687 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.category-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.category {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.category h3 {
+    padding: 15px 15px 5px 15px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+.category p {
+    padding: 0 15px 15px 15px;
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 14px;
+}
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.category {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.category h3 {
+    padding: 15px 15px 5px 15px;
+    color: #2c3e50;
+    margin: 0;
+    flex-shrink: 0;
+}
+
+.category p {
+    padding: 0 15px 15px 15px;
+    color: #7f8c8d;
+    margin: 0;
+    font-size: 14px;
+    flex-grow: 1;
+}
+
+.category-btn {
+    display: inline-block;
+    background-color: #4a69bd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 14px;
+    margin: 0 15px;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+.category-btn:hover {
+    background-color: #3c5aa8;
+    color: white;
+    text-decoration: none;
+}
+.category-btn {
+    display: inline-block;
+    background-color: #4a69bd;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.category-btn:hover {
+    background-color: #3c5aa8;
+    color: white;
+    text-decoration: none;
+}
+.category-link:hover .category {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+body {
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Баннер */
+.banner {
+    background: linear-gradient(135deg, #2c3e50 0%, #4a69bd 100%);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+    margin-bottom: 40px;
+    border-radius: 0 0 30px 30px;
+}
+
+.banner h1 {
+    font-size: 42px;
+    margin-bottom: 20px;
+}
+
+.banner p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #ff9f43;
+    color: white;
+    padding: 12px 30px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #ffaf60;
+}
+
+/* Категории */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #2c3e50;
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.category {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    text-align: center;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.category h3 {
+    padding: 15px;
+    color: #2c3e50;
+}
+
+/* Преимущества */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 50px;
+}
+
+.feature {
+    text-align: center;
+    padding: 30px 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.feature i {
+    font-size: 40px;
+    color: #4a69bd;
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+/* About Page Styles */
+.about-section {
+    padding: 40px 0;
+}
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+
+.about-text h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-text p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.advantages {
+    margin-bottom: 60px;
+}
+
+.advantages h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-icon {
+    font-size: 3em;
+    margin-bottom: 15px;
+}
+
+.advantage-item h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.team-section {
+    margin-bottom: 60px;
+}
+
+.team-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #ddd;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-member h3 {
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.position {
+    color: #666;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.values-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.values-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.value-item {
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.value-item h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+/* Contacts Page Styles */
+.contacts-section {
+    padding: 40px 0;
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+.contact-info h2,
+.contact-form-section h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.contact-icon {
+    font-size: 2em;
+    margin-right: 20px;
+}
+
+.contact-details h3 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.contact-details p {
+    margin-bottom: 5px;
+}
+
+.small {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.contact-form {
+    background: #f8f9fa;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form-group textarea {
+    resize: vertical;
+}
+
+.map-section {
+    margin-bottom: 60px;
+}
+
+.map-section h2 {
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.map-container {
+    height: 400px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.map-placeholder {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #e9ecef;
+}
+
+.map-info {
+    text-align: center;
+    padding: 30px;
+}
+
+.map-info h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.transport-info {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.transport-info h4 {
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.departments-section h2 {
+    margin-bottom: 40px;
+    color: #2c3e50;
+    text-align: center;
+}
+
+.departments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.department {
+    padding: 25px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.department h3 {
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.department p {
+    margin-bottom: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contacts-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .contact-item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .advantages-grid,
+    .team-grid,
+    .values-list,
+    .departments-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* Добавьте в конец main.css */
+
+/* ===== ABOUT PAGE ===== */
+.about-section {
+    padding: 40px 0;
+}
+
+.about-intro {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    margin-bottom: 60px;
+}
+
+.about-text h2 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+.advantage-item {
+    text-align: center;
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    transition: transform 0.3s;
+}
+
+.advantage-item:hover {
+    transform: translateY(-5px);
+}
+
+.advantage-icon {
+    font-size: 48px;
+    margin-bottom: 15px;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.team-member {
+    text-align: center;
+    padding: 30px;
+    background: #f8f9fa;
+    border-radius: 20px;
+}
+
+.member-photo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ===== CONTACTS PAGE ===== */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.contact-icon {
+    font-size: 32px;
+}
+
+/* ===== АДАПТИВ ДЛЯ ABOUT/CONTACTS ===== */
+@media (max-width: 768px) {
+    .about-intro {
+        grid-template-columns: 1fr;
+    }
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+    .contacts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .advantages-grid {
+        grid-template-columns: 1fr;
+    }
+}

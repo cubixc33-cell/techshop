@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Монитор Samsung Odyssey - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &gt;
+        <a href="catalog.html">Каталог</a> &gt;
+        <a href="catalog.html?category=peripherals">Периферия</a> &gt;
+        <span>Монитор Samsung Odyssey G5</span>
+    </div>
+
+    <div class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../image/monitor.jpg" alt="Монитор Samsung Odyssey" id="mainProductImage">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Монитор Samsung Odyssey G5</h1>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(38 отзывов)</span>
+            </div>
+            <div class="price">34 999 ₽</div>
+            <div class="short-description">
+                <p>Игровой монитор 27" с изогнутым экраном 1000R. Разрешение 2K WQHD, частота 144Hz, время отклика 1ms.</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity">
+                    <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <button class="btn add-to-cart" data-id="samsung-odyssey" data-name="Монитор Samsung Odyssey G5" data-price="34999" data-image="../image/monitor.jpg">Добавить в корзину</button>
+                <button class="btn btn-wishlist" data-id="samsung-odyssey" data-name="Монитор Samsung Odyssey G5" data-price="34999" data-image="../image/monitor.jpg">🤍 В избранное</button>
+            </div>
+            <div class="product-features">
+                <h3>Характеристики:</h3>
+                <ul>
+                    <li><strong>Диагональ:</strong> 27 дюймов</li>
+                    <li><strong>Разрешение:</strong> 2560x1440 (WQHD)</li>
+                    <li><strong>Частота:</strong> 144 Hz</li>
+                    <li><strong>Отклик:</strong> 1 ms (MPRT)</li>
+                    <li><strong>Изгиб:</strong> 1000R</li>
+                    <li><strong>Технология:</strong> AMD FreeSync Premium</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-description">
+        <h2>Описание товара</h2>
+        <p>Samsung Odyssey G5 — это игровой монитор с изогнутым экраном, который обеспечивает полное погружение в игровой процесс.</p>
+        <h3>Ключевые особенности:</h3>
+        <ul>
+            <li>Технология Quantum Dot для насыщенных цветов</li>
+            <li>Изогнутый экран 1000R для полного погружения</li>
+            <li>Технология HDR10 для улучшенной цветопередачи</li>
+            <li>Режим Eye Saver для снижения нагрузки на глаза</li>
+        </ul>
+    </div>
+
+    <div class="product-reviews">
+        <h2>Отзывы покупателей</h2>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Дмитрий Соколов</span>
+                <span class="review-date">20.10.2023</span>
+                <span class="review-rating">★★★★★</span>
+            </div>
+            <div class="review-content">
+                <p>Отличный монитор за свои деньги! Картинка четкая, цвета насыщенные.</p>
+            </div>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Ольга Кузнецова</span>
+                <span class="review-date">14.10.2023</span>
+                <span class="review-rating">★★★★☆</span>
+            </div>
+            <div class="review-content">
+                <p>Качество изображения на высоте. В целом довольна покупкой.</p>
+            </div>
+        </div>
+        <button class="btn" id="addReview">Добавить отзыв</button>
+    </div>
+
+    <div class="related-products">
+        <h2>Похожие товары</h2>
+        <div class="products">
+            <div class="product" data-product-id="rel1">
+                <a href="keyboard-product.html" class="product-link">
+                    <img src="../image/clava.jpg" alt="Клавиатура">
+                    <div class="product-info">
+                        <h3>Клавиатура Logitech G Pro</h3>
+                        <div class="price">7 999 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel1" data-name="Клавиатура Logitech G Pro" data-price="7999" data-image="../image/clava.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+            <div class="product" data-product-id="rel2">
+                <a href="mouse-product.html" class="product-link">
+                    <img src="../image/mouse.jpg" alt="Мышь">
+                    <div class="product-info">
+                        <h3>Мышь Razer DeathAdder V3</h3>
+                        <div class="price">5 499 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel2" data-name="Мышь Razer DeathAdder V3" data-price="5499" data-image="../image/mouse.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+
+    if (typeof initWishlistButtons === 'function') {
+        initWishlistButtons();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оперативная память Corsair - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &gt;
+        <a href="catalog.html">Каталог</a> &gt;
+        <a href="catalog.html?category=components">Комплектующие</a> &gt;
+        <span>Оперативная память Corsair Vengeance DDR5</span>
+    </div>
+
+    <div class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../image/ddr5.jpg" alt="Оперативная память Corsair DDR5" id="mainProductImage">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Оперативная память Corsair Vengeance DDR5</h1>
+            <div class="rating">
+                <span class="stars">★★★★★</span>
+                <span class="reviews">(42 отзыва)</span>
+            </div>
+            <div class="price">15 999 ₽</div>
+            <div class="short-description">
+                <p>Высокоскоростная оперативная память DDR5 для игровых систем и рабочих станций. 32GB комплект 2x16GB.</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity">
+                    <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <button class="btn add-to-cart" data-id="corsair-ram" data-name="Оперативная память Corsair Vengeance DDR5" data-price="15999" data-image="../image/ddr5.jpg">Добавить в корзину</button>
+                <button class="btn btn-wishlist" data-id="corsair-ram" data-name="Оперативная память Corsair Vengeance DDR5" data-price="15999" data-image="../image/ddr5.jpg">🤍 В избранное</button>
+            </div>
+            <div class="product-features">
+                <h3>Характеристики:</h3>
+                <ul>
+                    <li><strong>Объем:</strong> 32 GB (2x16GB)</li>
+                    <li><strong>Частота:</strong> 5600 MHz</li>
+                    <li><strong>Тайминги:</strong> CL36</li>
+                    <li><strong>Напряжение:</strong> 1.25V</li>
+                    <li><strong>Радиатор:</strong> Алюминиевый</li>
+                    <li><strong>Совместимость:</strong> Intel XMP 3.0</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-description">
+        <h2>Описание товара</h2>
+        <p>Оперативная память Corsair Vengeance DDR5 — это следующее поколение памяти для высокопроизводительных систем.</p>
+        <h3>Ключевые особенности:</h3>
+        <ul>
+            <li>Технология On-die ECC для повышения надежности</li>
+            <li>Высокая пропускная способность до 5600 МТ/с</li>
+            <li>Низкопрофильный дизайн для совместимости с большими кулерами</li>
+            <li>Поддержка Intel XMP 3.0 для простого разгона</li>
+        </ul>
+    </div>
+
+    <div class="product-reviews">
+        <h2>Отзывы покупателей</h2>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Михаил Орлов</span>
+                <span class="review-date">19.10.2023</span>
+                <span class="review-rating">★★★★★</span>
+            </div>
+            <div class="review-content">
+                <p>Отличная память! Работает стабильно на заявленных частотах.</p>
+            </div>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Анна Ковалева</span>
+                <span class="review-date">14.10.2023</span>
+                <span class="review-rating">★★★★★</span>
+            </div>
+            <div class="review-content">
+                <p>Память работает отлично, XMP профиль активируется без проблем. Качество сборки на высоте.</p>
+            </div>
+        </div>
+        <button class="btn" id="addReview">Добавить отзыв</button>
+    </div>
+
+    <div class="related-products">
+        <h2>Похожие товары</h2>
+        <div class="products">
+            <div class="product" data-product-id="rel1">
+                <a href="motherboard-product.html" class="product-link">
+                    <img src="../image/motherboard.jpg" alt="Материнская плата">
+                    <div class="product-info">
+                        <h3>Материнская плата ASUS ROG</h3>
+                        <div class="price">29 999 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel1" data-name="Материнская плата ASUS ROG" data-price="29999" data-image="../image/motherboard.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+            <div class="product" data-product-id="rel2">
+                <a href="intel-cpu-product.html" class="product-link">
+                    <img src="../image/corei7.jpg" alt="Процессор">
+                    <div class="product-info">
+                        <h3>Процессор Intel Core i7</h3>
+                        <div class="price">34 999 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel2" data-name="Процессор Intel Core i7" data-price="34999" data-image="../image/corei7.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+
+    if (typeof initWishlistButtons === 'function') {
+        initWishlistButtons();
+    }
+</script>
+</body>
+</html>

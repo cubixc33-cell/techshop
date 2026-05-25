@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Периферия - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/filters.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Периферия</h1>
+    <div class="filters-section">
+        <div class="filter-group"><h3>Тип периферии</h3><div class="filter-options"><label><input type="checkbox" name="type" value="keyboard"> Клавиатуры</label><label><input type="checkbox" name="type" value="mouse"> Мыши</label><label><input type="checkbox" name="type" value="headset"> Наушники</label><label><input type="checkbox" name="type" value="monitor"> Мониторы</label><label><input type="checkbox" name="type" value="webcam"> Веб-камеры</label><label><input type="checkbox" name="type" value="speakers"> Колонки</label><label><input type="checkbox" name="type" value="printer"> Принтеры</label><label><input type="checkbox" name="type" value="other"> Другое</label></div></div>
+        <div class="filter-group"><h3>Бренд</h3><div class="filter-options"><label><input type="checkbox" name="brand" value="logitech"> Logitech</label><label><input type="checkbox" name="brand" value="razer"> Razer</label><label><input type="checkbox" name="brand" value="steelseries"> SteelSeries</label><label><input type="checkbox" name="brand" value="samsung"> Samsung</label><label><input type="checkbox" name="brand" value="asus"> ASUS</label><label><input type="checkbox" name="brand" value="hyperx"> HyperX</label><label><input type="checkbox" name="brand" value="dell"> Dell</label><label><input type="checkbox" name="brand" value="hp"> HP</label></div></div>
+        <div class="filter-group"><h3>Цена</h3><div class="price-range"><input type="range" min="0" max="100000" step="1000" value="20000" class="slider" id="priceRange"><div class="price-values"><span>0 ₽</span><span id="priceValue">20 000 ₽</span><span>100 000 ₽</span></div></div></div>
+        <button class="btn" id="applyFilters">Применить фильтры</button>
+    </div>
+    <div class="products-grid">
+        <div class="product" data-product-id="per1"><a href="keyboard-product.html" class="product-link"><img src="../image/clava.jpg" alt="Клавиатура"><div class="product-info"><h3>Клавиатура Logitech G Pro</h3><p>Механическая, RGB подсветка, USB</p><div class="price">7 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per1" data-name="Клавиатура Logitech G Pro" data-price="7999" data-image="../image/clava.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="per2"><a href="mouse-product.html" class="product-link"><img src="../image/mouse.jpg" alt="Мышь"><div class="product-info"><h3>Мышь Razer DeathAdder V3</h3><p>Игровая, 26000 DPI, оптический сенсор</p><div class="price">5 499 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per2" data-name="Мышь Razer DeathAdder V3" data-price="5499" data-image="../image/mouse.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="per3"><a href="monitor-product.html" class="product-link"><img src="../image/monitor.jpg" alt="Монитор"><div class="product-info"><h3>Монитор Samsung Odyssey G5</h3><p>27", 2K 144Hz, 1ms, Curved, FreeSync</p><div class="price">34 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per3" data-name="Монитор Samsung Odyssey G5" data-price="34999" data-image="../image/monitor.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="per4"><a href="headphones-product.html" class="product-link"><img src="../image/head.jpg" alt="Наушники"><div class="product-info"><h3>Наушники HyperX Cloud II</h3><p>7.1 виртуальный surround, микрофон</p><div class="price">8 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per4" data-name="Наушники HyperX Cloud II" data-price="8999" data-image="../image/head.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="per5"><a href="webcam-product.html" class="product-link"><img src="../image/webcam.png" alt="Веб-камера"><div class="product-info"><h3>Веб-камера Logitech C920 Pro</h3><p>1080p Full HD, автофокус, стереозвук</p><div class="price">6 499 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per5" data-name="Веб-камера Logitech C920 Pro" data-price="6499" data-image="../image/webcam.png">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="per6"><a href="speakers-product.html" class="product-link"><img src="../image/speakers.png" alt="Колонки"><div class="product-info"><h3>Колонки Logitech Z623</h3><p>2.1 система, 200W RMS, сабвуфер, THX</p><div class="price">12 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="per6" data-name="Колонки Logitech Z623" data-price="12999" data-image="../image/speakers.png">🤍 В избранное</button></div></div>
+    </div>
+    <div class="pagination"><a href="#" class="page-link disabled">&laquo;</a><a href="#" class="page-link active">1</a><a href="#" class="page-link">2</a><a href="#" class="page-link">3</a><a href="#" class="page-link">&raquo;</a></div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script src="../scripts/catalog-products.js"></script>
+<script src="../scripts/filters.js"></script>
+</body>
+</html>

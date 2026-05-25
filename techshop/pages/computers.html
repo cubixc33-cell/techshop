@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Компьютеры - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/filters.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Компьютеры</h1>
+    <div class="filters-section">
+        <div class="filter-group"><h3>Назначение</h3><div class="filter-options"><label><input type="checkbox" name="purpose" value="gaming"> Игровые</label><label><input type="checkbox" name="purpose" value="office"> Офисные</label><label><input type="checkbox" name="purpose" value="workstation"> Рабочие станции</label><label><input type="checkbox" name="purpose" value="home"> Домашние</label></div></div>
+        <div class="filter-group"><h3>Процессор</h3><div class="filter-options"><label><input type="checkbox" name="cpu" value="intel"> Intel Core i5/i7/i9</label><label><input type="checkbox" name="cpu" value="amd"> AMD Ryzen 5/7/9</label></div></div>
+        <div class="filter-group"><h3>Видеокарта</h3><div class="filter-options"><label><input type="checkbox" name="gpu" value="nvidia"> NVIDIA GeForce</label><label><input type="checkbox" name="gpu" value="amd-gpu"> AMD Radeon</label><label><input type="checkbox" name="gpu" value="integrated"> Интегрированная</label></div></div>
+        <div class="filter-group"><h3>Цена</h3><div class="price-range"><input type="range" min="0" max="500000" step="10000" value="200000" class="slider" id="priceRange"><div class="price-values"><span>0 ₽</span><span id="priceValue">200 000 ₽</span><span>500 000 ₽</span></div></div></div>
+        <button class="btn" id="applyFilters">Применить фильтры</button>
+    </div>
+    <div class="products-grid">
+        <div class="product" data-product-id="comp1"><a href="hyperpc-product.html" class="product-link"><img src="../image/hyperpc.jpg" alt="HYPERPC"><div class="product-info"><h3>Игровой компьютер HYPERPC Gamer Pro</h3><p>Intel Core i7, RTX 4070, 32GB RAM, 1TB SSD + 2TB HDD</p><div class="price">124 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp1" data-name="Игровой компьютер HYPERPC" data-price="124999" data-image="../image/hyperpc.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp2"><a href="office-computer-product.html" class="product-link"><img src="../image/ofice.png" alt="Офисный"><div class="product-info"><h3>Офисный компьютер Business Pro</h3><p>Intel Core i5, 16GB RAM, 512GB SSD, Windows 11 Pro</p><div class="price">54 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp2" data-name="Офисный компьютер Business Pro" data-price="54999" data-image="../image/ofice.png">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp3"><a href="msi-computer-product.html" class="product-link"><img src="../image/aegis.jpg" alt="MSI"><div class="product-info"><h3>Игровой компьютер MSI Aegis</h3><p>AMD Ryzen 7, RTX 4060 Ti, 32GB RAM, 2TB SSD</p><div class="price">149 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp3" data-name="Игровой компьютер MSI Aegis" data-price="149999" data-image="../image/aegis.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp4"><a href="mini-pc-product.html" class="product-link"><img src="../image/mini.jpg" alt="Мини-ПК"><div class="product-info"><h3>Мини-ПК Compact Office</h3><p>Intel Core i3, 8GB RAM, 256GB SSD, Ultra Compact</p><div class="price">32 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp4" data-name="Мини-ПК Compact Office" data-price="32999" data-image="../image/mini.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp5"><a href="hp-workstation-product.html" class="product-link"><img src="../image/station.jpg" alt="Рабочая станция"><div class="product-info"><h3>Рабочая станция HP Z4</h3><p>Intel Xeon, RTX A4000, 64GB RAM, 2TB SSD</p><div class="price">289 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp5" data-name="Рабочая станция HP Z4" data-price="289999" data-image="../image/station.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp6"><a href="budget-computer-product.html" class="product-link"><img src="../image/cheep.png" alt="Бюджетный"><div class="product-info"><h3>Бюджетный компьютер Home Basic</h3><p>AMD Ryzen 3, 8GB RAM, 256GB SSD</p><div class="price">27 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp6" data-name="Бюджетный компьютер Home Basic" data-price="27999" data-image="../image/cheep.png">🤍 В избранное</button></div></div>
+    </div>
+    <div class="pagination"><a href="#" class="page-link disabled">&laquo;</a><a href="#" class="page-link active">1</a><a href="#" class="page-link">2</a><a href="#" class="page-link">3</a><a href="#" class="page-link">&raquo;</a></div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="computers.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script src="../scripts/catalog-products.js"></script>
+<script src="../scripts/filters.js"></script>
+</body>
+</html>

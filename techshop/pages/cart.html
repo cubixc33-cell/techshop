@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Корзина - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/cart.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">🛒 Корзина покупок</h1>
+    <div class="cart-content">
+        <div class="cart-items" id="cartItemsContainer">
+            <div class="cart-header" id="cartHeader" style="display:none;">
+                <span>Фото</span><span>Название</span><span>Цена</span><span>Количество</span><span>Сумма</span><span></span>
+            </div>
+        </div>
+        <div class="cart-summary">
+            <h2>Итого</h2>
+            <div class="summary-row"><span>Товары (<span id="itemsCount">0</span>)</span><span id="subtotal">0 ₽</span></div>
+            <div class="summary-row"><span>Доставка</span><span>Бесплатно</span></div>
+            <div class="bonus-section" id="bonusSection" style="display:none;">
+                <div class="summary-row bonus-info"><span>🎁 Доступно бонусов:</span><span id="userBonusAmount">0 ₽</span></div>
+                <div class="bonus-input-row"><label>Использовать бонусы:</label><div class="bonus-input-group"><input type="number" id="bonusToUse" value="0" min="0" step="100"><span>₽</span></div></div>
+                <div class="summary-row bonus-hint"><span>💡 1 бонус = 1 ₽. Можно использовать до 30% суммы заказа</span></div>
+            </div>
+            <div class="summary-row total"><span>Общая сумма</span><span id="totalAmount">0 ₽</span></div>
+            <button class="btn-checkout" id="checkoutBtn">💳 Оформить заказ</button>
+            <div class="continue-shopping"><a href="catalog.html">← Продолжить покупки</a></div>
+        </div>
+    </div>
+    <div class="cart-recommendations">
+        <h2>🔥 Вам может понравиться</h2>
+        <div class="products-grid">
+            <div class="product-card" data-product-id="rec1"><a href="keyboard-product.html" class="product-link"><img src="../image/clava.jpg" alt="Клавиатура"><h3>Клавиатура Logitech Mechanical</h3><div class="price">7 999 ₽</div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="rec1" data-name="Клавиатура Logitech Mechanical" data-price="7999" data-image="../image/clava.jpg">🤍 В избранное</button></div></div>
+            <div class="product-card" data-product-id="rec2"><a href="mouse-product.html" class="product-link"><img src="../image/mouse.jpg" alt="Мышь"><h3>Мышь Razer DeathAdder V3</h3><div class="price">5 499 ₽</div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="rec2" data-name="Мышь Razer DeathAdder V3" data-price="5499" data-image="../image/mouse.jpg">🤍 В избранное</button></div></div>
+            <div class="product-card" data-product-id="rec3"><a href="headphones-product.html" class="product-link"><img src="../image/head.jpg" alt="Наушники"><h3>Наушники HyperX Cloud II</h3><div class="price">8 999 ₽</div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="rec3" data-name="Наушники HyperX Cloud II" data-price="8999" data-image="../image/head.jpg">🤍 В избранное</button></div></div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>TechShop</h3><p>Лучшая компьютерная техника</p></div>
+            <div class="footer-section"><h4>Контакты</h4><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/cart-page.js"></script>
+<script src="../scripts/cart-bonus.js"></script>
+</body>
+</html>

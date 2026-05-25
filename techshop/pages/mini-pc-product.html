@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мини-ПК Compact Office - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+</head>
+<body>
+<!-- Header -->
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo">Tech<span>Shop</span></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="cart.html">Корзина <span class="cart-counter">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+</header>
+
+<!-- Main Content -->
+<main class="container">
+    <!-- Хлебные крошки -->
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &gt;
+        <a href="catalog.html">Каталог</a> &gt;
+        <a href="computers.html">Компьютеры</a> &gt;
+        <span>Мини-ПК Compact Office</span>
+    </div>
+
+    <!-- Детали товара -->
+    <div class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../image/mini.jpg" alt="Мини-ПК Compact Office" id="mainProductImage">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Мини-ПК Compact Office</h1>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(14 отзывов)</span>
+            </div>
+
+            <div class="price">32 999 ₽</div>
+
+            <div class="short-description">
+                <p>Компактный и энергоэффективный мини-ПК с процессором Intel Core i3. Идеален для офиса, дома или цифровых вывесок.</p>
+            </div>
+
+            <div class="product-actions">
+                <div class="quantity">
+                    <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <button class="btn add-to-cart">Добавить в корзину</button>
+                <button class="btn btn-wishlist">В избранное</button>
+            </div>
+
+            <div class="product-features">
+                <h3>Характеристики:</h3>
+                <ul>
+                    <li><strong>Процессор:</strong> Intel Core i3</li>
+                    <li><strong>Видеокарта:</strong> Интегрированная графика</li>
+                    <li><strong>Оперативная память:</strong> 8 GB DDR4</li>
+                    <li><strong>Накопитель:</strong> 256 GB SSD</li>
+                    <li><strong>Размеры:</strong> Ultra Compact Design</li>
+                    <li><strong>Потребление:</strong> Низкое энергопотребление</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Описание товара -->
+    <div class="product-description">
+        <h2>Описание товара</h2>
+        <p>Мини-ПК Compact Office — это идеальное решение для тех, кто ценит пространство и энергоэффективность. Несмотря на компактные размеры, компьютер обеспечивает достаточную производительность для офисных задач и повседневного использования.</p>
+
+        <h3>Ключевые особенности:</h3>
+        <ul>
+            <li>Сверхкомпактный корпус</li>
+            <li>Низкое энергопотребление</li>
+            <li>Тихая работа без вентиляторов</li>
+            <li>Крепление VESA для монтажа за монитором</li>
+            <li>Богатый набор портов подключения</li>
+        </ul>
+    </div>
+
+    <!-- Отзывы -->
+    <div class="product-reviews">
+        <h2>Отзывы покупателей</h2>
+
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Дмитрий Соколов</span>
+                <span class="review-date">19.10.2023</span>
+                <span class="review-rating">★★★★★</span>
+            </div>
+            <div class="review-content">
+                <p>Отличный мини-ПК! Занимает очень мало места, работает тихо. Идеален для офисной работы.</p>
+            </div>
+        </div>
+
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Ольга Кузнецова</span>
+                <span class="review-date">13.10.2023</span>
+                <span class="review-rating">★★★★☆</span>
+            </div>
+            <div class="review-content">
+                <p>Покупала для домашнего использования. Компактный, не шумит, потребляет мало электричества. Вполне довольна.</p>
+            </div>
+        </div>
+
+        <button class="btn" id="addReview">Добавить отзыв</button>
+    </div>
+
+    <!-- Похожие товары -->
+    <div class="related-products">
+        <h2>Похожие товары</h2>
+        <div class="products">
+            <div class="product">
+                <img src="../image/ofice.png" alt="Офисный компьютер">
+                <div class="product-info">
+                    <h3>Офисный компьютер Business Pro</h3>
+                    <div class="price">54 999 ₽</div>
+                    <a href="office-computer-product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+
+            <div class="product">
+                <img src="../image/cheep.png" alt="Бюджетный компьютер">
+                <div class="product-info">
+                    <h3>Бюджетный компьютер Home Basic</h3>
+                    <div class="price">27 999 ₽</div>
+                    <a href="budget-computer-product.html" class="btn">Подробнее</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <p>TechShop - интернет-магазин компьютерной техники с 2026 года. Мы предлагаем лучшие товары по выгодным ценам.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="laptops.html">Ноутбуки</a>
+                <a href="computers.html">Компьютеры</a>
+                <a href="monitors.html">Мониторы</a>
+                <a href="components.html">Комплектующие</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +7 (800) 123-45-67</p>
+                <p>✉️ info@techshop.ru</p>
+                <p>🏠 Москва, ул. Техническая, 42</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechShop - Все права защищены</p>
+        </div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+
+    if (typeof initWishlistButtons === 'function') {
+        initWishlistButtons();
+    }
+</script>
+</body>
+</html>

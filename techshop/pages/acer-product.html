@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ноутбук Acer Nitro - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/product-page.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <div class="breadcrumbs">
+        <a href="index.html">Главная</a> &gt;
+        <a href="catalog.html">Каталог</a> &gt;
+        <a href="catalog.html?category=laptops">Ноутбуки</a> &gt;
+        <span>Игровой ноутбук Acer Nitro 5</span>
+    </div>
+
+    <div class="product-detail">
+        <div class="product-gallery">
+            <div class="main-image">
+                <img src="../image/acernitro.jpg" alt="Игровой ноутбук Acer Nitro" id="mainProductImage">
+            </div>
+        </div>
+
+        <div class="product-info">
+            <h1>Игровой ноутбук Acer Nitro 5</h1>
+            <div class="rating">
+                <span class="stars">★★★★☆</span>
+                <span class="reviews">(18 отзывов)</span>
+            </div>
+            <div class="price">79 999 ₽</div>
+            <div class="short-description">
+                <p>Доступный игровой ноутбук с видеокартой RTX 3050. Отличный выбор для начинающих геймеров.</p>
+            </div>
+            <div class="product-actions">
+                <div class="quantity">
+                    <label for="quantity">Количество:</label>
+                    <input type="number" id="quantity" min="1" value="1">
+                </div>
+                <button class="btn add-to-cart" data-id="acer-nitro" data-name="Игровой ноутбук Acer Nitro 5" data-price="79999" data-image="../image/acernitro.jpg">Добавить в корзину</button>
+                <button class="btn btn-wishlist" data-id="acer-nitro" data-name="Игровой ноутбук Acer Nitro 5" data-price="79999" data-image="../image/acernitro.jpg">🤍 В избранное</button>
+            </div>
+            <div class="product-features">
+                <h3>Характеристики:</h3>
+                <ul>
+                    <li><strong>Процессор:</strong> Intel Core i5</li>
+                    <li><strong>Видеокарта:</strong> NVIDIA GeForce RTX 3050 4GB</li>
+                    <li><strong>Оперативная память:</strong> 16 GB DDR4</li>
+                    <li><strong>Накопитель:</strong> 512 GB SSD</li>
+                    <li><strong>Экран:</strong> 15.6" IPS, 144 Hz</li>
+                    <li><strong>Операционная система:</strong> Windows 11</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="product-description">
+        <h2>Описание товара</h2>
+        <p>Acer Nitro 5 — это игровой ноутбук начального уровня, который предлагает отличное соотношение цены и производительности.</p>
+        <h3>Ключевые особенности:</h3>
+        <ul>
+            <li>Мощная система охлаждения с технологией CoolBoost</li>
+            <li>Игровая клавиатура с красной подсветкой</li>
+            <li>Высокочастотный экран 144 Гц для плавного геймплея</li>
+            <li>Технология NVIDIA DLSS для повышения FPS</li>
+        </ul>
+    </div>
+
+    <div class="product-reviews">
+        <h2>Отзывы покупателей</h2>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Сергей Ковалев</span>
+                <span class="review-date">16.10.2023</span>
+                <span class="review-rating">★★★★☆</span>
+            </div>
+            <div class="review-content">
+                <p>Хороший игровой ноутбук за свои деньги. Все игры идут на высоких настройках.</p>
+            </div>
+        </div>
+        <div class="review">
+            <div class="review-header">
+                <span class="review-author">Анна Морозова</span>
+                <span class="review-date">08.10.2023</span>
+                <span class="review-rating">★★★★★</span>
+            </div>
+            <div class="review-content">
+                <p>Покупала брату на день рождения. Он в восторге!</p>
+            </div>
+        </div>
+        <button class="btn" id="addReview">Добавить отзыв</button>
+    </div>
+
+    <div class="related-products">
+        <h2>Похожие товары</h2>
+        <div class="products">
+            <div class="product" data-product-id="rel1">
+                <a href="product.html" class="product-link">
+                    <img src="../image/asus.jpg" alt="Игровой ноутбук">
+                    <div class="product-info">
+                        <h3>Игровой ноутбук ASUS ROG</h3>
+                        <div class="price">89 999 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel1" data-name="Игровой ноутбук ASUS ROG" data-price="89999" data-image="../image/asus.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+            <div class="product" data-product-id="rel2">
+                <a href="msi-product.html" class="product-link">
+                    <img src="../image/msi.jpg" alt="Игровой ноутбук">
+                    <div class="product-info">
+                        <h3>Игровой ноутбук MSI Katana</h3>
+                        <div class="price">129 999 ₽</div>
+                    </div>
+                </a>
+                <div class="product-buttons">
+                    <a href="#" class="btn add-to-cart">В корзину</a>
+                    <button class="btn-wishlist" data-id="rel2" data-name="Игровой ноутбук MSI Katana" data-price="129999" data-image="../image/msi.jpg">🤍 В избранное</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+
+    if (typeof initWishlistButtons === 'function') {
+        initWishlistButtons();
+    }
+</script>
+</body>
+</html>

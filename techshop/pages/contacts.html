@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html" class="active">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="contacts-section">
+        <h1>Контакты</h1>
+        <div class="contacts-grid">
+            <div class="contact-info">
+                <h2>Контактная информация</h2>
+                <div class="contact-item"><div class="contact-icon">📍</div><div><h3>Адрес</h3><p>г. Москва, ул. Компьютерная, 15</p></div></div>
+                <div class="contact-item"><div class="contact-icon">📞</div><div><h3>Телефоны</h3><p>+7 (495) 123-45-67</p><p>+7 (800) 123-45-67</p></div></div>
+                <div class="contact-item"><div class="contact-icon">✉️</div><div><h3>Email</h3><p>info@techshop.ru</p></div></div>
+                <div class="contact-item"><div class="contact-icon">🕒</div><div><h3>Время работы</h3><p>Пн-Пт: 9:00 - 21:00</p><p>Сб-Вс: 10:00 - 20:00</p></div></div>
+            </div>
+            <div class="contact-form-section">
+                <h2>Обратная связь</h2>
+                <form id="contactForm">
+                    <div class="form-group"><label>Имя</label><input type="text" id="name" required></div>
+                    <div class="form-group"><label>Email</label><input type="email" id="email" required></div>
+                    <div class="form-group"><label>Сообщение</label><textarea rows="4" id="message" required></textarea></div>
+                    <button type="submit" class="btn-primary">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>TechShop</h3><p>Лучшая компьютерная техника с 2026 года</p></div>
+            <div class="footer-section"><h4>Контакты</h4><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Сообщение отправлено! Мы свяжемся с вами в ближайшее время.');
+        this.reset();
+    });
+</script>
+</body>
+</html>

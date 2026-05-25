@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Комплектующие - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/filters.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Комплектующие</h1>
+    <div class="filters-section">
+        <div class="filter-group"><h3>Тип комплектующих</h3><div class="filter-options"><label><input type="checkbox" name="type" value="cpu"> Процессоры</label><label><input type="checkbox" name="type" value="gpu"> Видеокарты</label><label><input type="checkbox" name="type" value="ram"> Оперативная память</label><label><input type="checkbox" name="type" value="ssd"> SSD накопители</label><label><input type="checkbox" name="type" value="hdd"> Жесткие диски</label><label><input type="checkbox" name="type" value="motherboard"> Материнские платы</label><label><input type="checkbox" name="type" value="psu"> Блоки питания</label><label><input type="checkbox" name="type" value="cooling"> Системы охлаждения</label></div></div>
+        <div class="filter-group"><h3>Бренд</h3><div class="filter-options"><label><input type="checkbox" name="brand" value="intel"> Intel</label><label><input type="checkbox" name="brand" value="amd"> AMD</label><label><input type="checkbox" name="brand" value="nvidia"> NVIDIA</label><label><input type="checkbox" name="brand" value="asus"> ASUS</label><label><input type="checkbox" name="brand" value="msi"> MSI</label><label><input type="checkbox" name="brand" value="gigabyte"> Gigabyte</label><label><input type="checkbox" name="brand" value="corsair"> Corsair</label><label><input type="checkbox" name="brand" value="kingston"> Kingston</label></div></div>
+        <div class="filter-group"><h3>Цена</h3><div class="price-range"><input type="range" min="0" max="200000" step="5000" value="50000" class="slider" id="priceRange"><div class="price-values"><span>0 ₽</span><span id="priceValue">50 000 ₽</span><span>200 000 ₽</span></div></div></div>
+        <button class="btn" id="applyFilters">Применить фильтры</button>
+    </div>
+    <div class="products-grid">
+        <div class="product" data-product-id="comp1"><a href="intel-cpu-product.html" class="product-link"><img src="../image/corei7.jpg" alt="Процессор"><div class="product-info"><h3>Процессор Intel Core i7-13700K</h3><p>16 ядер, 24 потока, 3.4-5.4 ГГц, LGA 1700</p><div class="price">34 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp1" data-name="Процессор Intel Core i7-13700K" data-price="34999" data-image="../image/corei7.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp2"><a href="rtx4070-product.html" class="product-link"><img src="../image/4070.png" alt="Видеокарта"><div class="product-info"><h3>Видеокарта NVIDIA RTX 4070</h3><p>12GB GDDR6X, DLSS 3, Ray Tracing</p><div class="price">69 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp2" data-name="Видеокарта NVIDIA RTX 4070" data-price="69999" data-image="../image/4070.png">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp3"><a href="ram-product.html" class="product-link"><img src="../image/ddr5.jpg" alt="Оперативная память"><div class="product-info"><h3>Оперативная память Corsair DDR5</h3><p>32GB (2x16GB) 5600MHz, CL36</p><div class="price">15 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp3" data-name="Оперативная память Corsair DDR5" data-price="15999" data-image="../image/ddr5.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp4"><a href="ssd-product.html" class="product-link"><img src="../image/ssd.jpg" alt="SSD"><div class="product-info"><h3>SSD Samsung 980 Pro</h3><p>1TB NVMe M.2, PCIe 4.0, 7000/5000 МБ/с</p><div class="price">8 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp4" data-name="SSD Samsung 980 Pro" data-price="8999" data-image="../image/ssd.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp5"><a href="motherboard-product.html" class="product-link"><img src="../image/motherboard.jpg" alt="Материнская плата"><div class="product-info"><h3>Материнская плата ASUS ROG Strix Z790</h3><p>LGA 1700, DDR5, PCIe 5.0, Wi-Fi 6E</p><div class="price">29 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp5" data-name="Материнская плата ASUS ROG Strix Z790" data-price="29999" data-image="../image/motherboard.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="comp6"><a href="psu-product.html" class="product-link"><img src="../image/psu.jpg" alt="Блок питания"><div class="product-info"><h3>Блок питания Corsair RM850x</h3><p>850W, 80 Plus Gold, Fully Modular</p><div class="price">12 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="comp6" data-name="Блок питания Corsair RM850x" data-price="12999" data-image="../image/psu.jpg">🤍 В избранное</button></div></div>
+    </div>
+    <div class="pagination"><a href="#" class="page-link disabled">&laquo;</a><a href="#" class="page-link active">1</a><a href="#" class="page-link">2</a><a href="#" class="page-link">3</a><a href="#" class="page-link">&raquo;</a></div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script src="../scripts/catalog-products.js"></script>
+<script src="../scripts/filters.js"></script>
+</body>
+</html>

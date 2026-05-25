@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Оформление заказа - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/checkout.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Оформление заказа</h1>
+    <div class="checkout-steps">
+        <div class="step active">1. Контактные данные</div>
+        <div class="step">2. Доставка</div>
+        <div class="step">3. Оплата</div>
+        <div class="step">4. Подтверждение</div>
+    </div>
+    <div class="checkout-content">
+        <div class="checkout-form">
+            <h2>Контактные данные</h2>
+            <form id="checkoutForm">
+                <div class="form-group"><label for="fullName">ФИО *</label><input type="text" id="fullName" required></div>
+                <div class="form-group"><label for="email">Email *</label><input type="email" id="email" required></div>
+                <div class="form-group"><label for="phone">Телефон *</label><input type="tel" id="phone" required></div>
+                <div class="form-group"><label for="address">Адрес доставки *</label><textarea id="address" rows="3" required></textarea></div>
+                <div class="form-group"><label for="comment">Комментарий к заказу</label><textarea id="comment" rows="3"></textarea></div>
+                <h2>Способ доставки</h2>
+                <div class="delivery-options">
+                    <label class="delivery-option"><input type="radio" name="delivery" value="courier" checked><span>Курьерская доставка - 500 ₽</span><small>Доставка в течение 1-2 дней</small></label>
+                    <label class="delivery-option"><input type="radio" name="delivery" value="pickup"><span>Самовывоз - Бесплатно</span><small>г. Москва, ул. Техническая, 42</small></label>
+                </div>
+                <h2>Способ оплаты</h2>
+                <div class="payment-options">
+                    <label class="payment-option"><input type="radio" name="payment" value="card" checked><span>Банковская карта</span></label>
+                    <label class="payment-option"><input type="radio" name="payment" value="cash"><span>Наличными при получении</span></label>
+                </div>
+                <button type="submit" class="btn btn-order">Оформить заказ</button>
+            </form>
+        </div>
+        <div class="order-summary">
+            <h2>Ваш заказ</h2>
+            <div class="order-items">
+                <div class="order-item"><span>Игровой ноутбук ASUS ROG × 1</span><span>89 999 ₽</span></div>
+                <div class="order-item"><span>Монитор Samsung Odyssey × 1</span><span>34 999 ₽</span></div>
+            </div>
+            <div class="order-totals">
+                <div class="total-row"><span>Промежуточный итог</span><span>124 998 ₽</span></div>
+                <div class="total-row"><span>Доставка</span><span>500 ₽</span></div>
+                <div class="total-row final"><span>Итого</span><span>125 498 ₽</span></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="catalog.html">Мониторы</a><a href="catalog.html">Комплектующие</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script>
+    document.getElementById('checkoutForm')?.addEventListener('submit', function(e) {
+        e.preventDefault();
+        alert('Заказ оформлен! Спасибо за покупку!');
+        window.location.href = 'index.html';
+    });
+</script>
+</body>
+</html>

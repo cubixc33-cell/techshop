@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ноутбуки - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/products.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+    <link rel="stylesheet" href="../styles/filters.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Ноутбуки</h1>
+    <div class="filters-section">
+        <div class="filter-group"><h3>Бренд</h3><div class="filter-options"><label><input type="checkbox" name="brand" value="asus"> ASUS</label><label><input type="checkbox" name="brand" value="lenovo"> Lenovo</label><label><input type="checkbox" name="brand" value="hp"> HP</label><label><input type="checkbox" name="brand" value="dell"> Dell</label><label><input type="checkbox" name="brand" value="acer"> Acer</label></div></div>
+        <div class="filter-group"><h3>Тип ноутбука</h3><div class="filter-options"><label><input type="checkbox" name="type" value="gaming"> Игровые</label><label><input type="checkbox" name="type" value="office"> Офисные</label><label><input type="checkbox" name="type" value="ultrabook"> Ультрабуки</label><label><input type="checkbox" name="type" value="convertible"> Трансформеры</label></div></div>
+        <div class="filter-group"><h3>Диагональ экрана</h3><div class="filter-options"><label><input type="checkbox" name="screen" value="13"> 13-14"</label><label><input type="checkbox" name="screen" value="15"> 15-16"</label><label><input type="checkbox" name="screen" value="17"> 17" и более</label></div></div>
+        <div class="filter-group"><h3>Цена</h3><div class="price-range"><input type="range" min="0" max="300000" step="10000" value="150000" class="slider" id="priceRange"><div class="price-values"><span>0 ₽</span><span id="priceValue">150 000 ₽</span><span>300 000 ₽</span></div></div></div>
+        <button class="btn" id="applyFilters">Применить фильтры</button>
+    </div>
+    <div class="products-grid">
+        <div class="product" data-product-id="lap1"><a href="product.html" class="product-link"><img src="../image/asus.jpg" alt="ASUS ROG"><div class="product-info"><h3>Игровой ноутбук ASUS ROG Strix G15</h3><p>Intel Core i7-11800H, RTX 3060, 16GB RAM, 512GB SSD</p><div class="price">89 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap1" data-name="Игровой ноутбук ASUS ROG" data-price="89999" data-image="../image/asus.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="lap2"><a href="lenovo-product.html" class="product-link"><img src="../image/lenovo.jpg" alt="Lenovo"><div class="product-info"><h3>Ноутбук Lenovo IdeaPad 3</h3><p>AMD Ryzen 5, 8GB RAM, 256GB SSD, 15.6" Full HD</p><div class="price">45 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap2" data-name="Ноутбук Lenovo IdeaPad 3" data-price="45999" data-image="../image/lenovo.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="lap3"><a href="hp-product.html" class="product-link"><img src="../image/hp%20pfv.png" alt="HP Pavilion"><div class="product-info"><h3>Ноутбук HP Pavilion 15</h3><p>Intel Core i5, 8GB RAM, 512GB SSD, NVIDIA MX350</p><div class="price">67 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap3" data-name="Ноутбук HP Pavilion 15" data-price="67999" data-image="../image/hp%20pfv.png">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="lap4"><a href="dell-product.html" class="product-link"><img src="../image/dell.jpg" alt="Dell XPS"><div class="product-info"><h3>Ноутбук Dell XPS 13</h3><p>Intel Core i7, 16GB RAM, 1TB SSD, 13.4" 4K Touch</p><div class="price">149 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap4" data-name="Ноутбук Dell XPS 13" data-price="149999" data-image="../image/dell.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="lap5"><a href="acer-product.html" class="product-link"><img src="../image/acernitro.jpg" alt="Acer Nitro"><div class="product-info"><h3>Игровой ноутбук Acer Nitro 5</h3><p>Intel Core i5, RTX 3050, 16GB RAM, 512GB SSD, 144Hz</p><div class="price">79 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap5" data-name="Игровой ноутбук Acer Nitro 5" data-price="79999" data-image="../image/acernitro.jpg">🤍 В избранное</button></div></div>
+        <div class="product" data-product-id="lap6"><a href="msi-product.html" class="product-link"><img src="../image/msi.jpg" alt="MSI Katana"><div class="product-info"><h3>Игровой ноутбук MSI Katana</h3><p>Intel Core i7, RTX 4060, 16GB DDR5, 1TB SSD, 144Hz</p><div class="price">129 999 ₽</div></div></a><div class="product-buttons"><a href="#" class="btn add-to-cart">В корзину</a><button class="btn-wishlist" data-id="lap6" data-name="Игровой ноутбук MSI Katana" data-price="129999" data-image="../image/msi.jpg">🤍 В избранное</button></div></div>
+    </div>
+    <div class="pagination"><a href="#" class="page-link disabled">&laquo;</a><a href="#" class="page-link active">1</a><a href="#" class="page-link">2</a><a href="#" class="page-link">3</a><a href="#" class="page-link">&raquo;</a></div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>О компании</h3><p>TechShop - интернет-магазин компьютерной техники</p></div>
+            <div class="footer-section"><h3>Категории</h3><a href="catalog.html">Ноутбуки</a><a href="catalog.html">Компьютеры</a><a href="components.html">Комплектующие</a><a href="peripherals.html">Периферия</a></div>
+            <div class="footer-section"><h3>Контакты</h3><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script src="../scripts/header-update.js"></script>
+<script src="../scripts/profile.js"></script>
+<script src="../scripts/catalog-products.js"></script>
+<script src="../scripts/filters.js"></script>
+</body>
+</html>

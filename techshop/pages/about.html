@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О нас - TechShop</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/header.css">
+    <link rel="stylesheet" href="../styles/footer.css">
+    <link rel="stylesheet" href="../styles/responsive.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html">Каталог</a></li>
+                    <li><a href="about.html" class="active">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="../image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <section class="about-section">
+        <h1>О компании TechShop</h1>
+        <div class="about-intro">
+            <div class="about-text">
+                <h2>Наша история</h2>
+                <p>TechShop - ведущий онлайн-магазин компьютерной техники, основанный в 2010 году. За более чем 10 лет работы мы заслужили доверие тысяч клиентов по всей стране.</p>
+                <p>Наша миссия - предоставлять качественную компьютерную технику по доступным ценам с лучшим сервисом.</p>
+            </div>
+            <div class="about-image">
+                <img src="../image/logo.png" alt="Наш магазин">
+            </div>
+        </div>
+
+        <div class="advantages">
+            <h2>Наши преимущества</h2>
+            <div class="advantages-grid">
+                <div class="advantage-item"><div class="advantage-icon">🚚</div><h3>Бесплатная доставка</h3><p>При заказе от 20 000 руб.</p></div>
+                <div class="advantage-item"><div class="advantage-icon">🔧</div><h3>Гарантия 2 года</h3><p>Расширенная гарантия</p></div>
+                <div class="advantage-item"><div class="advantage-icon">💻</div><h3>Профконсультация</h3><p>Поможем выбрать</p></div>
+                <div class="advantage-item"><div class="advantage-icon">⚡</div><h3>Быстрая сборка</h3><p>За 1-3 дня</p></div>
+            </div>
+        </div>
+
+        <div class="team-section">
+            <h2>Наша команда</h2>
+            <div class="team-grid">
+                <div class="team-member"><div class="member-photo"><img src="../image/direcdtor.jpg" alt="Директор"></div><h3>Иван Петров</h3><p class="position">Генеральный директор</p><p>Основатель компании с 15-летним опытом</p></div>
+                <div class="team-member"><div class="member-photo"><img src="../image/consultant.jpg" alt="Технический специалист"></div><h3>Анна Сидорова</h3><p class="position">Технический директор</p><p>Сертифицированный специалист по сборке ПК</p></div>
+                <div class="team-member"><div class="member-photo"><img src="../image/tex.jpg" alt="Консультант"></div><h3>Михаил Козлов</h3><p class="position">Ведущий консультант</p><p>Поможет подобрать технику под любые задачи</p></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section"><h3>TechShop</h3><p>Лучшая компьютерная техника с 2026 года</p></div>
+            <div class="footer-section"><h4>Контакты</h4><p>📞 +7 (800) 123-45-67</p><p>✉️ info@techshop.ru</p></div>
+        </div>
+        <div class="copyright"><p>&copy; 2026 TechShop</p></div>
+    </div>
+</footer>
+
+<script src="../scripts/auth.js"></script>
+<script src="../scripts/cart.js"></script>
+<script>
+    function updateHeaderUser() {
+        const userData = localStorage.getItem('techshop_current_user');
+        const userNameSpan = document.getElementById('userNameShort');
+        const headerAvatar = document.getElementById('headerAvatar');
+        if (userData && userNameSpan) {
+            const user = JSON.parse(userData);
+            userNameSpan.textContent = user.name || user.email.split('@')[0];
+            const savedAvatar = localStorage.getItem(`user_avatar_${user.id}`);
+            if (savedAvatar && headerAvatar) headerAvatar.src = savedAvatar;
+        } else if (userNameSpan) {
+            userNameSpan.textContent = 'Войти';
+        }
+    }
+    updateHeaderUser();
+    window.addEventListener('storage', () => updateHeaderUser());
+</script>
+</body>
+</html>

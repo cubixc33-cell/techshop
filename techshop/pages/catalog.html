@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Каталог товаров - TechShop</title>
+    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/header.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <link rel="stylesheet" href="./styles/products.css">
+    <link rel="stylesheet" href="./styles/responsive.css">
+    <link rel="stylesheet" href="./styles/filters.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <div class="header-content">
+            <div class="logo"><a href="index.html">Tech<span>Shop</span></a></div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Главная</a></li>
+                    <li><a href="catalog.html" class="active">Каталог</a></li>
+                    <li><a href="about.html">О нас</a></li>
+                    <li><a href="contacts.html">Контакты</a></li>
+                    <li><a href="admin.html" class="admin-link" style="display:none;">👑 Админка</a></li>
+                </ul>
+            </nav>
+            <div class="header-right">
+                <a href="cart.html" class="cart-link">🛒 <span>Корзина</span> (<span id="cart-count">0</span>)</a>
+                <a href="profile.html" class="profile-link">
+                    <img src="./image/avatars/avatar1.jpg" alt="Avatar" class="header-avatar" id="headerAvatar">
+                    <span class="user-name-short" id="userNameShort">Войти</span>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <h1 class="section-title">Каталог товаров</h1>
+
+    <button class="filter-toggle-btn" id="filterToggleBtn">🔍 Показать фильтры</button>
+
+    <div class="filter-container" id="filterContainer">
+        <div class="filters-section">
+            <div class="filters-grid">
+                <div class="filter-group">
+                    <h3>📁 Категории</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" name="category" value="laptops"> 💻 Ноутбуки <span class="category-count"></span></label>
+                        <label><input type="checkbox" name="category" value="computers"> 🖥️ Компьютеры <span class="category-count"></span></label>
+                        <label><input type="checkbox" name="category" value="components"> 🔧 Комплектующие <span class="category-count"></span></label>
+                        <label><input type="checkbox" name="category" value="peripherals"> 🖱️ Периферия <span class="category-count"></span></label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>🏷️ Бренды</h3>
+                    <div class="filter-options">
+                        <label><input type="checkbox" name="brand" value="asus"> ASUS</label>
+                        <label><input type="checkbox" name="brand" value="lenovo"> Lenovo</label>
+                        <label><input type="checkbox" name="brand" value="hp"> HP</label>
+                        <label><input type="checkbox" name="brand" value="dell"> Dell</label>
+                        <label><input type="checkbox" name="brand" value="acer"> Acer</label>
+                        <label><input type="checkbox" name="brand" value="msi"> MSI</label>
+                        <label><input type="checkbox" name="brand" value="samsung"> Samsung</label>
+                        <label><input type="checkbox" name="brand" value="logitech"> Logitech</label>
+                        <label><input type="checkbox" name="brand" value="razer"> Razer</label>
+                        <label><input type="checkbox" name="brand" value="intel"> Intel</label>
+                        <label><input type="checkbox" name="brand" value="nvidia"> NVIDIA</label>
+                        <label><input type="checkbox" name="brand" value="hyperx"> HyperX</label>
+                        <label><input type="checkbox" name="brand" value="corsair"> Corsair</label>
+                        <label><input type="checkbox" name="brand" value="hyperpc"> HYPERPC</label>
+                        <label><input type="checkbox" name="brand" value="amd"> AMD</label>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>💰 Цена</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="300000" step="5000" value="300000" class="slider" id="priceRange">
+                        <div class="price-values">
+                            <span>0 ₽</span>
+                            <span id="priceValue">300 000 ₽</span>
+                            <span>300 000 ₽</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="filter-group">
+                    <h3>📊 Сортировка</h3>
+                    <select id="sortSelect">
+                        <option value="popular">🔥 По популярности</option>
+                        <option value="price-asc">💰 По возрастанию цены</option>
+                        <option value="price-desc">💰 По убыванию цены</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="filter-actions">
+                <button class="btn-apply" id="applyFilters">✓ Применить фильтры</button>
+                <button class="btn-reset" id="resetFilters">⟳ Сбросить все</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="products-grid" id="productsGrid">
+        <div style="text-align: center; padding: 60px;">Загрузка товаров...</div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" class="page-link disabled" id="prevPage">&laquo;</a>
+        <a href="#" class="page-link active" data-page="1">1</a>
+        <a href="#" class="page-link" data-page="2">2</a>
+        <a href="#" class="page-link" data-page="3">3</a>
+        <a href="#" class="page-link" data-page="4">4</a>
+        <a href="#" class="page-link" id="nextPage">&raquo;</a>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>О компании</h3>
+                <p>TechShop - интернет-магазин компьютерной техники с 2026 года.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Категории</h3>
+                <a href="catalog.html?category=laptops">Ноутбуки</a>
+                <a href="catalog.html?category=computers">Компьютеры</a>
+                <a href="catalog.html?category=components">Комплектующие</a>
+                <a href="catalog.html?category=peripherals">Периферия</a>
+            </div>
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>📞 +7 (800) 123-45-67</p>
+                <p>✉️ info@techshop.ru</p>
+                <p>🏠 Москва, ул. Техническая, 42</p>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2026 TechShop - Все права защищены</p>
+        </div>
+    </div>
+</footer>
+
+<script src="./scripts/auth.js"></script>
+<script src="./scripts/cart.js"></script>
+<script src="./scripts/header-update.js"></script>
+<script src="./scripts/profile.js"></script>
+<script src="./scripts/catalog-products.js"></script>
+<script src="./scripts/filters.js"></script>
+<script src="./scripts/pagination.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof updateCartCounter === 'function') {
+            updateCartCounter();
+        }
+
+        const priceRange = document.getElementById('priceRange');
+        const priceValue = document.getElementById('priceValue');
+        if (priceRange && priceValue) {
+            priceRange.addEventListener('input', function() {
+                priceValue.textContent = parseInt(this.value).toLocaleString() + ' ₽';
+            });
+        }
+    });
+</script>
+</body>
+</html>
